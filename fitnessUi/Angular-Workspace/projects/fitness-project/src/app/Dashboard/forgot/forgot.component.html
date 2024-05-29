@@ -1,0 +1,44 @@
+<div class="background">
+    <div class="container">
+        <div class="row">
+            <h2 >Forgot Password</h2>
+            <form [formGroup]="forgotForm" (ngSubmit)="submitResetRequest()">
+                <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="emailInput"><b>Email</b></label>
+                    <input type="email"  placeholder="Enter your email" formControlName="email"/>
+                    <div *ngIf="forgotForm.controls['email'].invalid && forgotForm.controls['email'].touched" class="text-danger">
+                        <ng-container *ngIf="forgotForm.controls['email'].errors?.['required']">
+                            Email is required
+                        </ng-container>
+                        <ng-container *ngIf="forgotForm.controls['email'].errors?.['email']">
+                            Email is not in valid format
+                        </ng-container>
+                    </div>  
+                </div>
+
+                <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="verificationCodeInput"><b>Verification Code</b></label>
+                    <input type="number" placeholder="Enter the verification code" formControlName="verificationCode"/>
+                    <div *ngIf="forgotForm.controls['verificationCode'].invalid && forgotForm.controls['verificationCode'].touched" class="text-danger">
+                        <ng-container *ngIf="forgotForm.controls['verificationCode'].errors?.['required']">
+                            verificationCode is required
+                        </ng-container>
+                    </div>  
+                </div>
+                <div class="form-outline form-white mb-4">
+                    <label class="form-label" for="newPasswordInput"><b>New Password</b></label>
+                    <input type="password"  placeholder="Enter your new password" formControlName="password"/>
+                    <div *ngIf="forgotForm.controls['password'].invalid && forgotForm.controls['password'].touched" class="text-danger">
+                        <ng-container *ngIf="forgotForm.controls['password'].errors?.['required']">
+                            Password is required
+                        </ng-container>
+                        <ng-container *ngIf="forgotForm.controls['password'].errors?.['minlength']">
+                            Password must contain at least 8 characters
+                        </ng-container>
+                    </div>
+                </div>
+                <button  type="submit" routerLink="/login">Reset</button>
+            </form>
+        </div>
+    </div>
+</div>

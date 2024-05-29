@@ -1,0 +1,28 @@
+<h2>Doctor Details</h2>
+<input type="text" [(ngModel)]="doctorName" placeholder="Enter doctorname">
+<button (click)="fetchDoctor()">Fetch Doctor</button>
+
+<div class="custom-container">
+  <div *ngFor="let doctor of doctorList" class="doctor-details">
+    <div class="detail">
+      <div class="label">DoctorId:</div>
+      <div class="value">{{ doctor.doctorId }}</div>
+    </div>
+    <div class="detail">
+      <div class="label">DoctorName:</div>
+      <div class="value">{{ doctor.doctorName }}</div>
+    </div>
+    <div class="detail">
+      <div class="label">YearOfExperience:</div>
+      <div class="value">{{ doctor.yearOfExperience }}</div>
+    </div>
+    <div class="detail">
+      <div class="label">Email:</div>
+      <div class="value">{{ doctor.email }}</div>
+    </div>
+    <div class="detail">
+      <div class="label">ContactNumber:</div>
+      <div class="value">{{ doctor.contactNumber }}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+ .con{
+    width: 100%;
+    position: fixed;
+    background-size: cover;
+
+  }
+  /* button{
+    background-color: orange;
+    width: 100px;
+    height: 35px;
+  } */
+  .user{
+    left: 50px;
+     color: orange;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 20%; 
+  }
+    .home{
+      color: orange;
+      font-size: 20px;
+      text-decoration: none;
+      border-radius: 20%;
+    }
+    .store{
+      color: orange;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .plans{
+      color: orange;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .more{
+      color: orange;
+      font-size: 20px;
+      text-decoration: none;
+    }
+    .doctor{
+      color: orange;
+      font-size: 20px;
+      text-decoration: none;
+      border-radius: 20%;
+    }
+    .trainer{
+      color: orange;
+      font-size: 20px;
+      text-decoration: none;
+      border-radius: 20%;
+    }
+    ul {
+      list-style: none;
+      background-color: rgb(35, 37, 39);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: block;
+      width: 190px;
+      height: 90vh;
+      margin-top: 60px;
+    
+    }
+
+    .navbar>ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap:50px;
+      align-items: center;
+  
+    }
+    .section{
+      margin-left: 200px;
+    }

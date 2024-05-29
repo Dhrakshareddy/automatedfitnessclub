@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="left-panel">
+    <h2>Membership Plans</h2>
+    <div class="membership-plans-container">
+      <div class="membership-plan" id="regular">
+
+        
+        <label ><h3>Regular Plan</h3></label>
+        <div class="plan-details">
+          <p>Price: Rs.10,000</p>
+          <p>Benefits:</p>
+          <ul class="benefits-list">
+            <li><i class="bi bi-building-fill-up"></i> Access to gym facilities</li>
+            <li><i class="bi bi-person-walking"></i> Group fitness classes</li>
+            <li><i class="bi bi-person-fill-check"></i> Personal trainer sessions</li>
+            <li *ngIf="showAdditionalBenefits">Limited access to swimming pool</li>
+            <li *ngIf="showAdditionalBenefits">Discounts on personal training sessions</li>
+            <li *ngIf="showAdditionalBenefits">Basic fitness assessments and goal setting sessions.</li>
+            <button (click)="toggleAdditionalBenefits()">+</button> 
+          </ul>
+        </div>
+      </div>
+    
+
+      <div class="membership-plan"  id="premium">
+        
+        <label for="premium"><h3>Premium Plan</h3></label>
+        <div class="plan-details">
+          <p>Price: Rs.15,000</p>
+          <p>Benefits:</p>
+          <ul class="benefits-list">
+            <li><i class="bi bi-building-fill-up"></i> All benefits of Regular Plan</li>
+            <li><i class="bi bi-person-walking"></i> Access to premium facilities</li>
+            <li><i class="bi bi-person-fill-check"></i> Specialized fitness programs</li>
+            <li *ngIf="showAdditionalBenefits">Access to specialized equipment like TRX, kettlebells, and functional training rigs.</li>
+            <li *ngIf="showAdditionalBenefits">Exclusive use of premium locker room amenities (e.g., sauna, steam room).</li>
+            <li *ngIf="showAdditionalBenefits">Discounts on merchandise and supplements sold at the club.</li>
+            <button (click)="toggleAdditionalBenefits()">+</button>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="right-panel" id="pay" >
+
+ 
+    <div class="payment-box" id="pay2">
+     
+      <form [formGroup]="plansForm" #paymentForm="ngForm" (ngSubmit)="makePayment()" class="formforpay"  #pdfContent>
+        <h1   >Payment Form</h1>
+          <table>
+            <tr>
+              <td><label for="membershipType">Select Membership Type:</label></td>
+              
+            <td><select id="paymentAmount" formControlName="membershipType" required>
+             <option value="Regular">Regular</option>
+             <option value="Premium">Premium</option>
+            </select></td>
+           </tr>
+            
+            <tr>
+         <td><label for="paymentAmount">Select Amount:</label></td>
+         
+       <td><select id="paymentAmount" formControlName="paymentAmount" required>
+        <option value="10000">Rs.10,000</option>
+        <option value="15000">Rs.15,000</option>
+       </select></td>
+      </tr>
+        <tr>
+         <td><label for="payment-mode">Select Payment Mode:</label></td> 
+          <td><select id="payment-mode" formControlName="paymentMode" required>
+            <option value="credit_card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank_transfer">Bank Transfer</option>
+          </select></td>
+        </tr>
+       <tr>
+        <td> <label for="paymentDate">Payment Date:</label></td> 
+         <td><input type="date" id="paymentDate" formControlName="paymentDate"></td> 
+        </tr>
+        <tr> 
+         <td> <label for="status">Status:</label></td>
+         <td> <input type="checkbox" id="status" formControlName="status"></td>
+        </tr>
+
+       
+       
+        <button type="submit" [disabled]="loading" id="paymentbutton">Make Payment</button>
+        
+        <div *ngIf="spinnerVisible" class="spinner-container">
+          <div class="spinner"></div>
+        </div>
+      </table>
+      </form>
+    </div>
+  </div>
+    
+</div>

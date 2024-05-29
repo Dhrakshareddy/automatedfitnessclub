@@ -1,0 +1,110 @@
+.head {
+   position: absolute;
+   left: 300px;
+   top: 300px;
+   
+  }
+  
+  .head h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    margin-top: 70px;
+    display: flex;
+  }
+  
+  .head p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    display: flex;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+  }
+  #con{
+ background-image: url('../../../assets/image4.avif');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    padding: 80px;
+    margin-top: -50px;
+    background-position: center;
+  }
+  
+.container-fluid{
+  background-size: cover;
+  color:white;
+  text-align: center;
+  width: 100%;
+  height:100vh;
+  margin-top: -50px; 
+  padding-top: 20px;
+}
+#heading h3,p{
+  text-align: center;
+  margin-top: 70px;
+}
+h3{
+  font-size: 30px;
+}
+
+#heading {
+  margin-top: 70px;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+.container{
+  display: flex;
+  justify-content: space-between      ;
+  align-self: center;
+  width: 100%;
+  height: auto;
+}
+.image1{
+  display: inline-block;
+ background-image: url(https://images.wsj.net/im-914552?size=1.5005861664712778&width=600&height=400);
+  width: 50%;
+  height:80vh;
+  color: #fff;
+  margin-left: 5px;
+  margin-top: 5px ;
+  background-repeat: no-repeat;
+ 
+
+}
+.text{
+  width: 50%;
+  height:80vh;
+  text-align: center;
+  margin-top: 30px;
+  /* margin-left: 10px; */
+}
+.image2{
+  display: inline-block;
+  background:url('../../../assets/image10.webp');
+  width: 50%;
+  height:80vh;
+  color: #fff;
+  margin-left: 30px;
+
+}
+.image3{
+  display: inline-block;
+ background-image: url(https://thumbs.dreamstime.com/b/fitness-woman-gym-resting-pilates-ball-exercise-ball-sweating-using-towel-relaxing-training-beautiful-multiracial-44342369.jpg);
+  width: 50%;
+  height:80vh;
+  color: #fff;
+  margin-left: 30px;
+  background-repeat: no-repeat;
+
+}
+

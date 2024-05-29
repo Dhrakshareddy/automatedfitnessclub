@@ -1,0 +1,32 @@
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    position: absolute;
+    left: 300px;
+    top: 140px;
+    border:2px solid rgb(51,63,83);
+  }
+
+  th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+ 
+  tr:nth-child(even) {
+    background-color: #f2f2f2; 
+  }
+  h2{
+    position: absolute;
+    left: 300px;
+    top: 80px;
+  }
+
+  

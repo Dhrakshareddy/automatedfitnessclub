@@ -1,0 +1,124 @@
+<div class="container">
+      <div>
+        <form   [formGroup]="userForm" (ngSubmit)="onSubmit()">
+          
+          <h1>User</h1>
+          <tr>
+            <td><label for="name">User Name :</label></td>
+            <td>
+               <input type="text" formControlName="name" >
+               <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched" class="text-danger">
+                <span *ngIf="userForm.get('name')?.errors?.['required']">username type is required.</span>
+                <span *ngIf="userForm.get('name')?.errors?.['pattern']">username type should not<br> contain numbers or symbols.</span>
+             
+               </div>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><label for="password">Password :</label></td>
+            <td>
+              <input type="password"  formControlName="password">
+              <div *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched" class="text-danger">
+                <span *ngIf="userForm.get('password')?.errors?.['required']">Password type is required.</span>
+                <span *ngIf="userForm.get('password')?.errors?.['maxlength']">Password should contain morethan 4 characters.</span>
+             
+               </div>
+             
+            </td>
+          </tr>
+        
+          <tr>
+            <td>
+              <label for="dateOfBirth">Date Of Birth :</label></td>
+             <td> <input type="date" formControlName="dateOfBirth" (blur)="validateDate()" max="2006-12-31">
+              <div *ngIf="dateError" class="error-message">Error: Year should be 2006 or earlier.</div>
+            </td>
+          </tr>
+          
+          <tr>
+            <td><label for="email">Email :</label></td>
+            <td>
+              <input type="email"  formControlName="email" required >
+
+            </td>
+          </tr>
+          <tr>
+            <td><label for="contactNumber">Contact Number :</label></td>
+            <td>
+              <input type="number"  formControlName="contactNumber" pattern="^[6-9]\d{9}$" >
+             
+            </td>
+          </tr>
+          <tr id="fitnessActivity">
+            <td><label for="fitnessActivity">Fitness Activity :</label></td>
+             <td id="fitnessinput">
+              <select id="activityId" ngModel   formControlName="fitnessActivity" required >
+                <option value="" disabled selected>Select</option>
+                <option >Overall fitness</option>
+                <option >Weightloss</option>
+              </select>
+             
+            </td> 
+          <tr id="trainer">
+            <td><label for="trainerCode">Trainer :</label></td>
+             <td id="trainerinput">
+              <select id="trainerId" ngModel   formControlName="trainerCode" required >
+                <option value="" disabled selected>Select Trainer</option>
+                <option >Trainer1</option>
+                <option >Trainer2</option>
+              </select>
+             
+            </td> 
+          </tr>
+
+          <tr id="doctor">
+            <td><label for="doctorCode">Doctor :</label></td>
+            <td id="doctorinput">
+              <select id="doctor" ngModel  formControlName="doctorCode" required >
+                <option value="" disabled selected>Select Doctor</option>
+                <option>doctor1</option>
+                <option>doctor2</option>
+              </select>
+             
+            </td>
+          </tr>
+
+          <tr>
+            <td><input class="update"type="Update" value="Update" (click)="update()"></td>
+            <td><input class="submit" type="submit" value="Add"></td>
+            <!-- <button type="submit" [disabled]="loading" id="paymentbutton">Make Payment</button> -->
+<!--         
+        <div *ngIf="spinnerVisible" class="spinner-container">
+          <div class="spinner"></div>
+        </div> -->
+
+        <div *ngIf="submittingForm" class="spinner-overlay">
+          <div class="spinner"></div>
+        </div>
+          </tr>
+        </form>
+      </div>
+      <div class="info"> 
+        <div class="box" *ngIf="trainerDetails">
+          <h2>Trainer Details</h2>
+          <div class="li"><p>Trainer Code</p><p>: {{ trainerDetails.trainerCode }}</p></div>
+          <div class="li"><p>Trainer Name</p><p>: {{ trainerDetails.name }}</p></div>
+          <div class="li"><p>Trainer Age</p><p>: {{ trainerDetails.age }}</p></div>
+          <div class="li"><p>Shift timimgs</p><p>: {{ trainerDetails.shiftTimings }}</p></div>
+          <div class="li"><p>Years of experience</p><p>: {{ trainerDetails.yearOfExperience }}</p></div>
+        
+        </div>
+    
+      <div class="box" *ngIf="doctorDetails" style="height: 250px;margin-top: 50px;">
+        <h2>Doctor Details</h2>
+        <div class="li"><p>Doctor Code</p><p>: {{ doctorDetails.doctorCode }}</p></div>
+        <div class="li"><p>Doctor Name</p><p>: {{ doctorDetails.name }}</p></div>
+        <div class="li"><p>Gender</p><p>: {{ doctorDetails.gender }}</p></div>
+        <div class="li"><p>Specialization</p><p>: {{ doctorDetails.specialization }}</p></div>
+        <div class="li"><p>Shift timimgs</p><p>: {{ doctorDetails.shiftTimings }}</p></div>
+        <div class="li"><p>Years of experience</p><p>: {{ doctorDetails.yearOfExperience }}</p></div>
+      </div>
+    </div>
+  </div>
+

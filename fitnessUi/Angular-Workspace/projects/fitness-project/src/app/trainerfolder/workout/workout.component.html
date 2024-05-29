@@ -1,0 +1,23 @@
+<div class="container">
+  <form class="form" #frmRegister="ngForm" action="" method="post">
+    <h1>Add Workout</h1>
+
+    <div class="form-group">
+      <label>Duration:</label>
+      <input type="text" [(ngModel)]="workout.duration" name="duration">
+    </div>
+    <div class="form-group">
+      <label>Workout Date:</label>
+      <input type="text" [(ngModel)]="workout.workoutDate" name="workoutDate">
+    </div>
+    <div class="form-group">
+      <label>Number Of Sets Completed:</label>
+      <input type="number" [(ngModel)]="workout.setsCompleted" name="setsCompleted" placeholder="Enter Number Of Sets Completed">
+    </div>
+   
+    <div class="form-row">
+      <input class="reset" type="reset" id="reset">
+      <input id="submit" class="submit" type="submit" value="Save" (click)="saveWorkout()">
+    </div>
+  </form>
+</div>

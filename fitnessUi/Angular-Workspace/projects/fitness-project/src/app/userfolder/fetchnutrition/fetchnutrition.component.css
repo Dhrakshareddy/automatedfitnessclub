@@ -1,0 +1,53 @@
+.con {
+  max-width: 70%;
+  margin-top: 100px;
+  margin-left: 290px;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+.nutrition-row > div {
+  border: 1px solid #ddd;
+  padding: 8px;
+  min-height: 30px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.nutrition-row > div:hover {
+  border-color: black;
+}
+
+.tbody tr td {
+  text-align: center;
+}
+
+.table-dark {
+  background-color: black;
+  color: #fff;
+}
+
+.table-header-row {
+  display: flex;
+}
+
+.table-header-row > div {
+  flex: 2;
+  padding: 8px;
+  text-align: center;
+}
+
+.nutrition-row {
+  display: flex;
+}
+
+.nutrition-row > div {
+  flex: 1;
+  padding: 8px;
+  text-align: center;
+}

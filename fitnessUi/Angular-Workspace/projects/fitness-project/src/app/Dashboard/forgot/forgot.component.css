@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(https://slidechef.net/wp-content/uploads/2022/10/Free-Medicine-Background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* text-align: center; */
+}
+
+.row {
+  /* border: 1px solid grey; */
+  width: 35%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 20px;
+  background: white;
+}
+
+/* .login-form {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+} */
+
+h2 {
+  text-align: center;
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+/* .form-group {
+  margin-bottom: 20px;
+} */
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: rgb(94, 198, 239);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+a{
+  color:  rgb(52, 174, 222);
+}
+
+.custom-snackbar {
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+}

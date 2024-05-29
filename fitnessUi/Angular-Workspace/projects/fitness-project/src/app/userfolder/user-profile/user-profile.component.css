@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  width: 740px;
+  height: 430px;
+  margin: 90px auto;
+  margin-left: 340px;
+}
+
+.left-container {
+  width: 33%;
+  height: 100%;
+  border-right: 1px solid #e4e4e4;
+  background-color: #a2a8d3;
+  border-radius: 30px 0px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.right-container {
+  width: 67%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 20px;
+  background-image: url(../../../assets/user.png);
+  background-size: cover;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.details {
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-weight: bold;
+  width: 190px;
+}
+
+.divider {
+  margin: 0 5px;
+}
+
+.value {
+  font-weight: normal;
+}

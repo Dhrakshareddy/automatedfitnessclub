@@ -1,0 +1,26 @@
+/* Add custom styles for buttons */
+.btn {
+    padding: 8px 16px; 
+    margin-right: 10px; 
+  }
+  
+ 
+  .medical-history-btn {
+    background-color: blue; 
+    color: white; 
+  }
+  
+  .nutrition-table-btn {
+    background-color: green; 
+    color: white; 
+  }
+  
+  .edit-nutrition-btn {
+    background-color: orange; 
+    color: white;
+  }
+  .container{
+    margin-top: 30px;
+    margin-left: 70px;
+  }
+

@@ -1,0 +1,36 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end">
+      <div class="d-flex left-align">
+        <h1>Equipment List</h1>
+        <div class="col-md-1">
+          <button class="add" routerLink="add">+</button>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <div class="table-header table-dark">
+          <div class="table-cell">Equipment Name</div>
+          <div class="table-cell">Brand</div>
+          <div class="table-cell">Quantity</div>
+          <div class="table-cell">Purchase Date</div>
+          <div class="table-cell">Edit</div>
+          <div class="table-cell">Remove</div>
+        </div>
+        <div class="table-body">
+          <div *ngFor="let equipment of equipment" class="table-row">
+            <div class="table-cell value">{{ equipment.equipmentName }}</div>
+            <div class="table-cell value">{{ equipment.brand }}</div>
+            <div class="table-cell value">{{ equipment.quantity }}</div>
+            <div class="table-cell value">{{ equipment.purchaseDate }}</div>
+            <div class="table-cell">
+              <div class="edit" routerLink="/admin/equipment/edit/{{ equipment.equipmentId }}"><i class="fas fa-edit"></i></div>
+            </div>
+            <div class="table-cell">
+              <div class="delete" *ngIf="equipment.equipmentId" (click)="deleteEquipment(equipment.equipmentId)"><i class="fa-solid fa-trash"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

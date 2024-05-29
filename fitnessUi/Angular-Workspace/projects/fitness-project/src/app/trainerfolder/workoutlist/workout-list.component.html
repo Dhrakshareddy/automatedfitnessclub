@@ -1,0 +1,42 @@
+<div id="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end ">
+      <div class=" d-flex justify-content-end ">
+        <h1>Workout List</h1>
+       
+      <div class="col-md-1  ">
+        <button id="add" class="btn btn-primary float-lg-end" routerLink="add">
+         +
+        </button>
+
+        </div>
+      </div>
+    <table class="table table-bordered  mt-4">
+      <thead class="table-dark" >
+        <tr>
+          <th>Workout Date</th>
+          <th>Duration</th>
+          <th>Sets Completed</th>
+         
+        </tr>
+      </thead>
+      <tbody class="tbody" >
+        <tr *ngFor="let workout of workout">
+          <td>{{ workout.workoutDate }}</td>
+          <td>{{ workout.duration }}</td>
+        <td>{{workout.setsCompleted}}</td>
+         
+        </tr>
+       
+     
+      </tbody>
+    </table>
+  </div>
+  
+  </div>
+</div>
+
+  
+
+  
+

@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="bg-dark" id="con">
+    
+      <div class="bg-dark p-2">
+        <a class="d-flex text-decoration-none mt-1 align-items-center">
+          <span class="fs-4 d-none d-sm-inline"></span>
+        </a>
+         <ul >
+          
+          <li >
+            <a  class="nav-link " aria-current="page">
+              <span class=" ms-2 d-none d-sm-inline "routerLink="trainerpro"  class="home">TRAINER</span></a>
+          </li>
+          <li >
+            <a    class="nav-link " aria-current="page"><span
+                class=" ms-2 d-none d-sm-inline" routerLink="user" class="condidates" ><i class="fa-regular fa-user"></i> Candidates</span></a>
+          </li>
+        
+          <li >
+            <a    class="nav-link " aria-current="page"><span
+                class=" ms-2 d-none d-sm-inline" routerLink="user-class" class="attendence" ><i class="fa-solid fa-display"></i> Classes</span></a>
+          </li>
+
+          <li >
+            <a    class="nav-link " aria-current="page"><span
+                class=" ms-2 d-none d-sm-inline" routerLink="user-workouts" class="userworkouts" ><i class="fa-solid fa-dumbbell"></i> User Workouts</span></a>
+          </li>
+        </ul> 
+      </div>
+    </div> 
+    <section class="mt-3"> 
+      <router-outlet></router-outlet>
+  </section>
+   
+  </div>
+</div>

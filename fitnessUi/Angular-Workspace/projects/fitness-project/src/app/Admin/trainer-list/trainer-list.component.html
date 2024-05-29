@@ -1,0 +1,38 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end">
+      <div class="d-flex left-align">
+        <h1>Trainer List</h1>
+        <div class="col-md-1">
+          <button class="add" routerLink="add">+</button>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <div class="table-header table-dark">
+          <div class="table-cell">Trainer Name</div>
+          <div class="table-cell">Age</div>
+          <div class="table-cell">Years Of Experience</div>
+          <div class="table-cell">Contact Number</div>
+          <div class="table-cell">Edit</div>
+          <div class="table-cell">Remove</div>
+        </div>
+        <div class="table-body">
+          <!-- Loop through the list of doctors -->
+          <div *ngFor="let trainer of trainers" class="table-row">
+            <div class="table-cell">{{ trainer.name}}</div>
+            <div class="table-cell">{{trainer.age}}</div>
+            <div class="table-cell">{{ trainer.yearOfExperience}}</div>
+            <div class="table-cell">{{trainer.contactNumber }}</div>
+            <div class="table-cell">
+             <div class="edit" routerLink="edit/{{  trainer.trainerId}}"><i class="fas fa-edit"></i></div>
+            </div>
+            <div class="table-cell">
+              <!-- Delete button -->
+              <div class="delete" *ngIf="trainer.trainerId" (click)="deleteTrainer(trainer.trainerId)"><i class="fa-solid fa-trash"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

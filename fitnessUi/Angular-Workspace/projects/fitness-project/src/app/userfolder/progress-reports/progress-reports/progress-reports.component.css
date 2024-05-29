@@ -1,0 +1,49 @@
+.con {
+  max-width: 70%;
+  margin-top: 100px;
+  margin-left: 290px;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+.progress-row-container > div {
+  border: 1px solid #ddd;
+  padding: 8px;
+  min-height: 30px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.progress-row-container > div:hover {
+  border-color: black;
+}
+
+.progress-table-dark {
+  background-color: black;
+  color: #fff;
+}
+
+.progress-table-header-row {
+  display: flex;
+}
+
+.progress-table-header-row > div {
+  flex: 2;
+  padding: 8px;
+  text-align: center;
+}
+
+.progress-row-container {
+  display: flex;
+}
+
+.progress-row-container > div {
+  flex: 1;
+  padding: 8px;
+  text-align: center;
+}

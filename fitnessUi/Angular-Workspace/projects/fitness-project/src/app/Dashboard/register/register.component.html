@@ -1,0 +1,143 @@
+
+
+  <div class="container">
+    <div>
+      <div>
+        <form #frmRegister="ngForm" (ngSubmit)="onSubmit(frmRegister.value)" class="needs-validation" novalidate>
+          <h1 class="mb-4">Add User</h1>
+
+          <div class="form-group col-md-6">
+            <label for="name">User Name</label>
+           <div>
+                <input type="text" class="form-control" ngModel name="name" required #name="ngModel"
+                placeholder="Enter your name">
+                <div *ngIf="name.invalid && name.touched" class="text-danger">
+                  <span *ngIf="name.errors?.['required']">Username is required.</span><br>
+                </div>
+           </div>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="password">Password</label>
+           <div>
+              <input type="password" class="form-control" ngModel name="password" required #password="ngModel"
+              placeholder="Set your password">
+            <div *ngIf="password.invalid && password.touched" class="text-danger">
+              <span *ngIf="password.errors?.['required']">Password is required.</span><br>
+            </div>
+           </div>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="date">Date Of Birth</label>
+            <div>
+              <input type="date" class="form-control" ngModel name="dateOfBirth" #dateOfBirth="ngModel"
+              placeholder="Enter your date of birth" (blur)="validateDate()" max="2006-12-31">
+              <div *ngIf="dateError" class="error-message">Error: Year should be 2006 or earlier.</div>
+            </div>
+
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <div>
+                <input type="email" class="form-control" ngModel name="email" required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" #email="ngModel" placeholder="Enter your email">
+                <div *ngIf="email.invalid && email.touched" class="text-danger">
+                    <span *ngIf="email.errors?.['required']">Email is required.</span>
+                    <span *ngIf="email.errors?.['pattern']">Invalid email format.</span>
+                </div>
+            </div>
+        </div>
+
+          <div class="form-group col-md-6">
+            <label for="contactNumber">Contact Number</label>
+            <div>
+              <input type="number" class="form-control" ngModel name="contactNumber" required pattern="^[6-9]\d{9}$"
+              #contactNumber="ngModel" placeholder="Enter your contact number">
+            <div *ngIf="contactNumber.invalid && contactNumber.touched" class="text-danger">
+              <span *ngIf="contactNumber.errors?.['required']">Contact number is required.</span>
+              <span *ngIf="contactNumber.errors?.['pattern']">Provide the correct number.</span>
+            </div>
+            </div>
+          </div>
+
+
+
+          <div class="form-group col-md-6">
+            <label for="trainer">Trainer</label>
+            <select id="trainer" ngModel [(ngModel)]="selectedTrainer" name="trainerCode" required
+              (change)="fetchTrainerDetails()" class="form-control">
+              <option value="" disabled selected>Select Trainer</option>
+              <option>Trainer1</option>
+              <option>Trainer2</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="doctor">Doctor</label>
+            <select id="doctor" ngModel [(ngModel)]="selectedDoctor" name="doctorCode" required
+              (change)="fetchDoctorDetails()" class="form-control">
+              <option value="" disabled selected>Select Doctor</option>
+              <option>Doctor1</option>
+              <option>Doctor2</option>
+            </select>
+            <div *ngIf="doctorId.invalid && doctorId.touched" class="text-danger">
+              <span *ngIf="doctorId.errors?.['required']">Selection is required.</span>
+            </div>
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <button type="reset" class="btn btn-secondary" id="reset">Reset</button>
+            </div>
+            <div class="form-group col-md-6">
+              <button type="submit" class="btn btn-primary" id="submit" >Submit</button>
+            </div>
+            <div *ngIf="submittingForm" class="spinner-overlay">
+              <div class="spinner"></div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="info">
+        <div class="box" *ngIf="trainerDetails"style="height: 300px;margin-top: 50px;">
+          <h2 class="mt-4">Trainer Details</h2>
+          <div class="list-group mt-2">
+            <div class="list-group-item"><strong>Trainer Code:</strong> {{ trainerDetails.trainerCode }}</div>
+            <div class="list-group-item"><strong>Trainer Name:</strong> {{ trainerDetails.name }}</div>
+            <div class="list-group-item"><strong>Trainer Age:</strong> {{ trainerDetails.age }}</div>
+            <div class="list-group-item"><strong>Shift Timings:</strong> {{ trainerDetails.shiftTimings }}</div>
+            <div class="list-group-item"><strong>Years of Experience:</strong> {{ trainerDetails.yearOfExperience }}
+            </div>
+          </div>
+        </div>
+
+        <div class="box" *ngIf="doctorDetails" style="height: 300px;margin-top: 50px;">
+          <h2 class="mt-4">Doctor Details</h2>
+          <div class="list-group mt-2">
+            <div class="list-group-item"><strong>Doctor Code:</strong> {{ doctorDetails.doctorCode }}</div>
+            <div class="list-group-item"><strong>Doctor Name:</strong> {{ doctorDetails.name }}</div>
+            <!-- <div class="list-group-item"><strong>Gender:</strong> {{ doctorDetails.gender }}</div> -->
+            <div class="list-group-item"><strong>Specialization:</strong> {{ doctorDetails.specialization }}</div>
+            <div class="list-group-item"><strong>Shift Timings:</strong> {{ doctorDetails.shiftTimings }}</div>
+            <div class="list-group-item"><strong>Years of Experience:</strong> {{ doctorDetails.yearOfExperience }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- 
+</body>
+
+</html> -->
+<section>
+  <router-outlet></router-outlet>
+</section>

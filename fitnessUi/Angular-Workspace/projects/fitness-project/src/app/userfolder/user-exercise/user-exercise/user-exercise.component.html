@@ -1,0 +1,25 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end">
+        <h1>Track Your Exercise</h1>
+      <div class="exercise-table mt-4">
+        <div class="table-dark">
+          <div class="table-header-row">
+            <div>ExerciseName</div>
+            <div>Description</div>
+            <div>NumberOfSets</div>
+            <div>EquipmentNeeded</div>
+          </div>
+        </div>
+        <div class="tbody">
+          <div *ngFor="let exercise of exercise" class="exercise-row">
+            <div>{{ exercise.exerciseName }}</div>
+            <div>{{ exercise.description }}</div>
+            <div>{{ exercise.numberOfSets }}</div>
+            <div>{{ exercise.equipmentNeeded }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

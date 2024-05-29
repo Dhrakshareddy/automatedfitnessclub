@@ -1,0 +1,23 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end ">
+        <h1>Track Your Attendance</h1>
+      <div class="attendance-table mt-4">
+        <div class="table-dark">
+          <div class="table-header-row">
+            <div>User name</div>
+            <div>Date</div>
+            <div>Status</div>
+          </div>
+        </div>
+        <div class="tbody">
+          <div *ngFor="let attendance of attendanceList" class="attendance-row">
+            <div>{{ attendance.name }}</div>
+            <div>{{ attendance.date }}</div>
+            <div>{{ attendance.status }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

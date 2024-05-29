@@ -1,0 +1,26 @@
+<h2>User Details</h2>
+<input type="text" [(ngModel)]="userName" placeholder="Enter user name">
+<button (click)="fetchUser()">Fetch User</button>
+
+<div class="custom-container">
+  <div *ngFor="let user of userList" class="user-details">
+    <div class="detail">
+      <div class="label">UserName:</div>
+      <div class="value">{{ user.name }}</div>
+    </div>
+    <div class="detail">
+      <div class="label">Email:</div>
+      <div class="value">{{ user.email }}</div>
+    </div>
+    <div class="detail">
+      <div class="label">ContactNo:</div>
+      <div class="value">{{ user.contactNumber }}</div>
+    </div>
+    <div class="detail">
+      <div class="label">Dob:</div>
+      <div class="value">{{ user.dob }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay"></div>

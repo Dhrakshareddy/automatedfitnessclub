@@ -1,0 +1,62 @@
+<div class="container">
+    <h2>User List</h2>
+    <table class="table">
+      <thead>
+        <tr>
+         
+          <th>User Name</th>
+          <th>Conatct Number</th>
+          <th>Email</th>
+
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.contactNumber }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <button class="btn medical-history-btn" (click)="getUserMedicalHistory(user.name)">Medical History</button>
+            <button class="btn nutrition-table-btn" (click)="goToNutritionTable(user.name)">Nutrition Table</button>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  
+  <div *ngIf="medicalHistoryNotFound">
+    <div class="alert alert-warning" role="alert">
+      Medical history not found for this user.
+    </div>
+  </div>
+  
+  <div *ngIf="errorFetchingMedicalHistory">
+    <div class="alert alert-danger" role="alert">
+      Error fetching medical history. Please try again later.
+    </div>
+  </div>
+  
+  <div *ngIf="medicalHistory.length > 0">
+    <h3>Medical History</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Date Of Assessment</th>
+          <th>Blood Pressure</th>
+          <th>Heart Rate</th>
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let history of medicalHistory">
+          <td>{{ history.dateOfAssessment }}</td>
+          <td>{{ history.bloodPressure }}</td>
+          <td>{{ history.heartRate }}</td>
+  
+        </tr>
+      </tbody>
+    </table>
+   
+  </div>

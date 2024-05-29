@@ -1,0 +1,49 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Prescription</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patient of patients">
+      <td>{{ patient.id }}</td>
+      <td>{{ patient.name }}</td>
+      <td>{{ patient.prescription }}</td>
+      <td>
+        <button class="btn btn-primary" (click)="editPatient(patient)">Edit</button>
+        <button class="btn btn-danger" (click)="deletePatient(patient.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<form (submit)="addPatient()">
+  <div class="form-group">
+    <label for="newPatientName">Name:</label>
+    <input type="text" class="form-control" id="newPatientName" [(ngModel)]="newPatient.name" name="newPatientName">
+  </div>
+  <div class="form-group">
+    <label for="newPatientPrescription">Prescription:</label>
+    <input type="text" class="form-control" id="newPatientPrescription" [(ngModel)]="newPatient.prescription" name="newPatientPrescription">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add Patient</button>
+</form>
+
+<div *ngIf="selectedPatient">
+  <h2>Edit Patient</h2>
+  <form (submit)="saveChanges()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="selectedPatient.name" name="name">
+    </div>
+ 
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="button" class="btn btn-secondary" (click)="selectedPatient = null">Cancel</button>
+  </form>
+</div>

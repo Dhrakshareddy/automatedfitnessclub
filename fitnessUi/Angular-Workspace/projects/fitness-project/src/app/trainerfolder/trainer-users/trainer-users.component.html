@@ -1,0 +1,40 @@
+<body>
+  <div class="container">
+    <h1>List Of Trainees</h1>
+    <table id="table" >
+        <thead>
+          <tr>
+          
+            <th class="th" style="width:150px">User Name</th>
+         
+            <th class="th" style="width:200px">Email</th>
+            <th class="th" style="width:150px">Contact Number</th>
+            
+            <th id="action" style="width:300px">Action</th>
+    
+    
+          
+              
+          
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+           
+            <td style="border: 1px solid black;">{{ user.name }}</td>
+            
+            <td style="border: 1px solid black;">{{ user.email }}</td>
+            <td style="border: 1px solid black;">{{ user.contactNumber }}</td>
+          
+            <td id="action">
+              <button id="exercise" routerLink="exercise" (click)="goToExercise(user.name)">Exercise</button>
+            
+              <button id="progress" routerLink="progress"  (click)="goToProgress(user.name)">Progress</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+  </body>
+    
+  

@@ -1,0 +1,28 @@
+<h2>Trainer Details</h2>
+<input type="text" [(ngModel)]="trainerName" placeholder="Enter trainer name">
+<button (click)="fetchTrainer()">Fetch Trainer</button>
+<div>
+  
+  <table class="custom-table">
+    <thead>
+      <tr>
+     
+       
+        <th>TrainerName</th>
+        <th>Age</th>
+        <th>ContactNumber</th>
+        <th>Certification</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let trainer of trainers">
+      
+        <td>{{trainer.trainerName}}</td>
+        <td>{{ trainer.age }}</td>
+        <td>{{trainer.contactNumber}}</td>
+        <td>{{trainer.certification}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

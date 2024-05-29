@@ -1,0 +1,74 @@
+<div class="container">
+  <div>
+    <div>
+      <form [formGroup]="trainerForm" (ngSubmit)="onSubmit()" class="con">
+        <h1>Trainer Registration</h1>
+        <table>
+          <tr>
+            <td><label for="trainerName">Trainer Name:</label></td>
+            <td>
+              <input type="text" placeholder="Enter trainer name" formControlName="name">
+              <div *ngIf="trainerForm.get('trainerName')?.invalid && trainerForm.get('trainerName')?.touched"
+                class="text-danger">
+                <span *ngIf="trainerForm.get('trainerName')?.errors?.['required']">Trainername is required.</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="password">Password:</label></td>
+            <td>
+              <input type="password" placeholder="Enter the password" formControlName="password">
+            </td>
+          </tr>
+
+
+          <tr>
+            <td><label for="age">Age:</label></td>
+            <td>
+              <input type="number" placeholder="Enter the age" formControlName="age">
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="contactNo">Contact Number:</label></td>
+            <td>
+              <input type="number" placeholder="Enter contactNo" formControlName="contactNumber">
+              <div *ngIf="trainerForm.get('contactNo')?.invalid && trainerForm.get('contactNo')?.touched"
+                class="text-danger">
+                <span *ngIf="trainerForm.get('contactNo')?.errors?.['required']">Contact number is required.</span>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="yearOfExperience">Year Of Experience:</label></td>
+            <td>
+              <input type="number" placeholder="Enter yearOfExperience" formControlName="yearOfExperience">
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="shiftTimings">Shift Timings:</label></td>
+            <td>
+              <input type="text" placeholder="Enter shiftTimings" formControlName="shiftTimings">
+            </td>
+          </tr>
+
+
+
+          <tr>
+            <td><label for="trainerCode">Trainer Code</label></td>
+            <td>
+              <input type="text" placeholder="Enter Trainer code " formControlName="trainerCode">
+            </td>
+          </tr>
+
+          <tr>
+            <td><input class="reset" type="reset" (click)="update()" value="update"></td>
+            <td><input class="submit" type="submit" value="Add"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+</div>

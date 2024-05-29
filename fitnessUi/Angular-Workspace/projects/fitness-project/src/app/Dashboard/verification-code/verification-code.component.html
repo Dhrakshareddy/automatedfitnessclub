@@ -1,0 +1,27 @@
+<div class="background">
+    <div class="container">
+        <div class="row">
+            <h2>Verification</h2>
+
+            <form  [formGroup]="emailForm" (ngSubmit)="sendEmail()">
+                <div class="form-white mb-4">
+                    <label class="form-label" for="typeEmailX"
+                        style="font-size:18px; margin: 8px 0px;"><b>Email</b></label>
+                    <input type="email" placeholder="Enter your email" formControlName="email" />
+                    <div *ngIf="emailForm.controls['email'].invalid && emailForm.controls['email'].touched" class="text-danger">
+                        <ng-container *ngIf="emailForm.controls['email'].errors?.['required']">
+                            Email is required
+                        </ng-container>
+                        <ng-container *ngIf="emailForm.controls['email'].errors?.['email']">
+                            Email is not in valid format
+                        </ng-container>
+                    </div>
+                </div>
+
+                <button type="submit">sendEmail</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div class="bg-dark d-flex flex-column align-items-center justify-content-center">
+      <div class="bg-dark p-2">
+        <a class="d-flex text-decoration-none mt-1 align-items-center">
+          <span class="fs-4 d-none d-sm-inline"></span>
+        </a>
+
+
+        <ul class="nav nav-pills flex-column mt-4">
+
+
+          <li><a routerLink="doctorpro" id="doctor">DOCTOR</a></li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/doctorDashboard/userfetch">
+              <i class="bi bi-people" style="font-size: 25px; color: #a2a8d3;"></i>
+              <span class="ms-2 d-none d-sm-inline" id="user">Users</span>
+            </a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="outlet">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

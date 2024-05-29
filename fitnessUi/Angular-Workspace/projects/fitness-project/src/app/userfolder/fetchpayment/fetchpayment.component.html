@@ -1,0 +1,25 @@
+<h2>Payments Details</h2> 
+<!-- <input type="text" [(ngModel)]="userName" placeholder="Enter user name">
+<button (click)="fetchClasses()">Fetch Classes</button> -->
+ <div>
+  
+  
+<table class="custom-table">
+    <thead>
+      <tr>
+
+	<th>PaymentAmount</th>
+    <th>PaymentMode</th>
+    <th>PaymentDate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let payment of payment">
+       
+       <td>{{payment.paymentAmount}}</td>
+       <td>{{payment.paymentMode}}</td>
+       <td>{{payment.paymentDate}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>        

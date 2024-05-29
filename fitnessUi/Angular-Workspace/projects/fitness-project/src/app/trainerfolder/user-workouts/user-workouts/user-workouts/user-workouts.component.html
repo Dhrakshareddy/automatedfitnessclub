@@ -1,0 +1,15 @@
+<h2>Workouts Details</h2>
+<div class="custom-table">
+  <div class="workout-row workout-header">
+    <div>User Name</div>
+    <div>Date</div>
+    <div>Duration</div>
+    <div>SetsCompleted</div>
+  </div>
+  <div *ngFor="let workout of workouts" class="workout-row">
+    <div class="workout-cell" >{{ workout.name }}</div>
+    <div class="workout-cell">{{ workout.workoutDate }}</div>
+    <div class="workout-cell" >{{ workout.duration }}</div>
+    <div class="workout-cell" >{{ workout.setsCompleted }}</div>
+  </div>
+</div>

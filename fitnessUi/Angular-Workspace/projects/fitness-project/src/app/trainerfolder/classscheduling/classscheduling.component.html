@@ -1,0 +1,83 @@
+<div class="container">
+  <h2>Class Schedule</h2>
+  
+  
+  <div class="class-list">
+    
+    <div class="table-heading">
+      <div class="table-cell">Name</div>
+      <div class="table-cell">Class Name</div>
+      <div class="table-cell">Date</div>
+      <div class="table-cell">Enrolled</div>
+      <div class="table-cell">Duration</div>
+      <div class="table-cell">Action</div>
+    </div>
+
+    
+    <div *ngFor="let class of classes" class="class-item">
+      <div class="table-row">
+        <div class="table-cell">{{ class.name }}</div>
+        <div class="table-cell">{{ class.className }}</div>
+        <div class="table-cell">{{ class.date }}</div>
+        <div class="table-cell">{{ class.enrolled }}</div>
+        <div class="table-cell">{{ class.duration }}</div>
+        <div class="table-cell">
+          <button (click)="editClass(class)" class="edit">Edit</button>
+          <button (click)="deleteClass(class)" class="delete">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Edit form -->
+  <div *ngIf="isEditing" class="edit-form">
+    <h3>Edit Class</h3>
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" *ngIf="editingClass" [(ngModel)]="editingClass.name" name="name">
+    </div>
+    <div class="form-group">
+      <label>Class Name:</label>
+      <input type="text" *ngIf="editingClass" [(ngModel)]="editingClass.className" name="className">
+    </div>
+    <div class="form-group">
+      <label>Date:</label>
+      <input type="date" *ngIf="editingClass" [(ngModel)]="editingClass.date" name="date">
+    </div>
+    <div class="form-group">
+      <label>Enrolled:</label>
+      <input type="number" *ngIf="editingClass" [(ngModel)]="editingClass.enrolled" name="enrolled">
+    </div>
+    <div class="form-group">
+      <label>Duration:</label>
+      <input type="text" *ngIf="editingClass" [(ngModel)]="editingClass.duration" name="duration">
+    </div>
+    <button (click)="updateClass()" class="update">Update</button>
+  </div>
+
+  <!-- Add form -->
+  <div *ngIf="!isEditing" class="add-form">
+    <h3>Add New Class</h3>
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="newClass.name" name="name">
+    </div>
+    <div class="form-group">
+      <label>Class Name:</label>
+      <input type="text" [(ngModel)]="newClass.className" name="className">
+    </div>
+    <div class="form-group">
+      <label>Date:</label>
+      <input type="date" [(ngModel)]="newClass.date" name="date">
+    </div>
+    <div class="form-group">
+      <label>Enrolled:</label>
+      <input type="number" [(ngModel)]="newClass.enrolled" name="enrolled">
+    </div>
+    <div class="form-group">
+      <label>Duration:</label>
+      <input type="text" [(ngModel)]="newClass.duration" name="duration">
+    </div>
+    <button (click)="saveClass()" class="save">Save</button>
+  </div>
+</div>

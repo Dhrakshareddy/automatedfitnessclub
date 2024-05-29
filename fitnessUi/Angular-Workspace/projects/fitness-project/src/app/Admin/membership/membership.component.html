@@ -1,0 +1,35 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end">
+      <div class="d-flex left-align">
+        <h1>Membership List</h1>
+        <div class="col-md-1">
+          <button class="add" routerLink="add">+</button>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <div class="table-header table-dark">
+          <div class="table-cell">Membership Type</div>
+          <div class="table-cell">Description</div>
+          <div class="table-cell">Period</div>
+          <div class="table-cell">Edit</div>
+          <div class="table-cell">Remove</div>
+        </div>
+        <div class="table-body">
+          <!-- Loop through the list of doctors -->
+          <div *ngFor="let membership of membership" class="table-row">
+            <div class="table-cell">{{ membership.membershipType}}</div>
+            <div class="table-cell">{{membership.description}}</div>
+            <div class="table-cell">{{ membership.period}}</div>
+            <div class="table-cell">
+             <div class="edit" routerLink="/admin/membership/edit/{{ membership.membershipId }}"><i class="fas fa-edit"></i></div>
+            </div>
+            <div class="table-cell">
+              <div class="delete" *ngIf="membership.membershipId" (click)="deleteMembership(membership.membershipId)"><i class="fa-solid fa-trash"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

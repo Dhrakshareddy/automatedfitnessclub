@@ -1,0 +1,23 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end">
+        <h1> Track your Nutrition</h1>
+      <div class="nutrition-table mt-4">
+        <div class="table-dark">
+          <div class="table-header-row">
+            <div>Calories</div>
+            <div>Carbohydrates</div>
+            <div>Proteins</div>
+          </div>
+        </div>
+        <div class="tbody">
+          <div *ngFor="let nutrition of nutritionList" class="nutrition-row">
+            <div>{{ nutrition.caloriesToBeconsumed }}</div>
+            <div>{{ nutrition.carbohydratesToBeconsumed }}</div>
+            <div>{{ nutrition.proteinToBeconsumed }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

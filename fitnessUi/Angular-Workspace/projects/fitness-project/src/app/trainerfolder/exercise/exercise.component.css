@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    background-size: cover;
+    
+  }
+  
+  .form {
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    width: 40%;
+    margin-top: 130px;
+    margin-left: 35%;
+  }
+  
+  .form h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .form .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    
+  }
+  
+  .form .form-row label {
+    width: 150px;
+    margin-right: 10px;
+  }
+  
+  form input[type="text"],
+  form input[type="number"] {
+    border: 1px solid black;
+    border-radius: 30px; /* Added border radius */
+    height: 30px;
+    padding: 5px;
+    color: #5a6269f1;
+    width: 200px;
+  }
+  
+  /* Adjusted the width for equipment input */
+  .form .form-row.equipment input {
+    width: 300px;
+  }
+
+  
+  .form .submit,
+  .form .reset {
+    height: 40px;
+    width: 130px;
+    margin-left: 50px;
+    color: black;
+    cursor: pointer;
+  }

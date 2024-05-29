@@ -1,0 +1,41 @@
+<div class="container">
+  <div>
+    <div>
+      <form [formGroup]="membershipForm" (ngSubmit)="onSubmit()">
+        <h1>Membership Registration</h1>
+        <table>
+          <tr>
+            <td><label for="membershipType">Membership Type:</label></td>
+            <td>
+              <input type="text" placeholder="Enter memebership type" formControlName="membershipType">
+
+            </td>
+          </tr>
+          <tr>
+            <td><label for="period">Period:</label></td>
+            <td>
+              <input type="text" placeholder="Enter the period" formControlName="period">
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="description">Description:</label></td>
+            <td>
+              <input type="text" placeholder="Enter the description" formControlName="description">
+            </td>
+          </tr>
+
+
+
+
+          <tr>
+            <td><input class="reset" type="reset" value="update" (click)="update()"></td>
+            <td><input class="submit" type="submit" value="Add"></td>
+          </tr>
+
+        </table>
+
+      </form>
+    </div>
+  </div>
+</div>

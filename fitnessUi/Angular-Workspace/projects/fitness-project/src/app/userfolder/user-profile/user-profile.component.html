@@ -1,0 +1,39 @@
+ <div class="card">
+            <div class="left-container">
+                <div class="img"></div>
+                <h2>{{ user.name }}</h2>
+            </div>
+            <div class="right-container">
+                <h1>Profile Details</h1>
+                <div class="details">
+                    <div class="detail-row">
+                        <div class="label">Name:</div>
+                        <div class="value">{{ user.name }}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="label">Date Of Birth:</div>
+                        <div class="value">{{ user.dateOfBirth | date }}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="label">Email:</div>
+                        <div class="value">{{ user.email }}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="label">Contact Number:</div>
+                        <div class="value">{{ user.contactNumber }}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="label">Fitness Activity:</div>
+                        <div class="value">{{ user.fitnessActivity }}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="label">Trainer Code:</div>
+                        <div class="value">{{ user.trainerCode }}</div>
+                    </div>
+                    <div class="detail-row">
+                        <div class="label">Doctor Code:</div>
+                        <div class="value">{{ user.doctorCode }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>

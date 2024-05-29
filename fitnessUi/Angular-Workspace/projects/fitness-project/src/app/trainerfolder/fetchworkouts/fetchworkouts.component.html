@@ -1,0 +1,46 @@
+<div id="con">
+      <div class="container mt-2">
+        <div class="row p-4 text-end ">
+          <div class=" d-flex justify-content-end ">
+            <h1>User Workouts</h1>
+           
+          
+          </div>
+        <table class="table table-bordered  mt-4">
+          <thead class="table-dark" >
+            <tr>
+              <th>Username</th>
+              <th>Date</th>
+            
+              <th>Duration</th>
+              <th>Number of sets completed</th>
+              
+             
+            </tr>
+          </thead>
+          <tbody class="tbody" >
+            <tr *ngFor="let workout of workouts">
+              <td>{{ workout.username  }}</td>
+              <td>{{ workout.workoutDate }}</td>
+    
+              <td>{{ workout.duration }}</td>
+              <td>{{ workout.setsCompleted }}</td>
+             
+    
+    
+          
+            </tr>
+           
+         
+          </tbody>
+        </table>
+      </div>
+      
+      </div>
+    </div>
+    
+      
+    
+      
+    
+    

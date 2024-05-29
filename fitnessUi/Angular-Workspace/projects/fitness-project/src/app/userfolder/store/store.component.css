@@ -1,0 +1,62 @@
+.container{
+    margin-top: 150px;
+    position: absolute;
+    left: 200px;
+   
+}
+.con{
+   overflow-y: hidden;
+   width: 270px;
+   height: 240px;
+   border-radius: 10%;
+  
+   color: black;
+   border: 2px solid black;
+   margin: 30px;
+   padding-left: 30px;
+   font-size: 20px;
+   padding-top: 10px;
+   margin-bottom: -20px;
+   margin-top: 80px;
+   
+ 
+}
+
+body{
+    position: relative;
+   top: -100px;
+    width: 100vw;
+    height: 170vh; 
+    background-repeat: no-repeat;
+    
+    background-position: center;
+    background-size: cover;
+    z-index: -5;
+}
+
+.con img{
+    margin-left: -20px;
+}
+.head{
+    font-size: 18px;
+    margin-top: 0px;
+}
+.middle{
+    font-size: 13px;
+    margin-top: -15px;
+}
+.last{
+    font-size: 12px;
+    margin-top: -10px;
+}
+.cart{
+    width: 180px;
+    height: 30px;
+    border-radius: 10%;
+    margin-top: -50px;
+}
+h3{
+   
+    top: 90px;
+    left: -190px;
+}

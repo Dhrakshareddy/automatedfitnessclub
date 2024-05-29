@@ -1,0 +1,26 @@
+ <div class="plans-container" id="plans">
+  <div class="d-flex flex-wrap justify-content-between">
+     <div *ngFor='let plan of fitnessPlans' class="card" id="img" >
+      <div class="card-header">
+        <p  id="name">{{plan.name}}</p>
+      </div>
+       <p style="text-align: center;" id="des">{{ plan.description }}</p>
+      <p style="text-align: center;" id="price"><strong>Price: ${{ plan.price }}</strong></p>
+      <div id="below">
+        <input type="checkbox" [(ngModel)]="isChecked" [disabled]="isButtonDisabled"  >
+        <button (click)="enableCheckbox()" [disabled]="isButtonDisabled" id="buy">Buy Now</button>
+        <button (click)="removeButtons()" id="remove">Remove</button>
+      </div>
+    </div>
+    <div>
+    </div> 
+    </div>
+  </div>
+  
+
+
+    
+    
+ 
+   
+

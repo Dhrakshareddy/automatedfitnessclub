@@ -1,0 +1,31 @@
+<div class="container">
+    <div>
+      <div class="form">
+        <h1>Add Exercise</h1>
+        <div class="form-row">
+          <label>Username</label>
+          <input type="text"  [(ngModel)]="exercise.username" name=name readonly>
+        </div>
+        <div class="form-row">
+          <label>Exercise Name</label>
+          <input type="text"  [(ngModel)]="exercise.exerciseName" name=exerciseName placeholder="Enter exercise name">
+        </div>
+        <div class="form-row">
+          <label>Description</label>
+          <input type="text" [(ngModel)]="exercise.description" name=description placeholder="Enter description">
+        </div>
+        <div class="form-row">
+          <label>Number of sets</label>
+          <input type="number" [(ngModel)]="exercise.numberOfSets" name=numberOfSets placeholder="Enter number of sets">
+        </div>
+        <div class="form-row">
+          <label>Equipment Needed</label>
+          <input type="text" [(ngModel)]="exercise.equipmentNeeded" name=equipmentNeeded placeholder="Enter equipment needed">
+        </div>
+        <div class="form-buttons">
+          <input class="reset" type="reset">
+          <input class="submit" type="submit" value="Add" routerLink="/trainer/user" (click)="saveExercise()">
+        </div>
+      </div>
+    </div>
+  </div>

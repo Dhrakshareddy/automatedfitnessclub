@@ -1,0 +1,36 @@
+
+.custom-table {
+    margin-top: 10px;
+    width: 40%;
+    border-collapse: collapse;
+    position: absolute;
+    top: 220px;
+    left: 300px;
+  }
+  .custom-table th, .custom-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  button
+  {
+    background-color: rgb(94, 94, 208);
+    color:white;
+    border-radius: 10px;
+    margin-left:10px;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+  }
+  h2{
+    position: absolute;
+    top: 150px;
+    left: 300px;
+  
+  }
+  input{
+    position: absolute;
+    top: 200px;
+    left: 300px;
+
+  }

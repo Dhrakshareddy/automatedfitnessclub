@@ -1,0 +1,49 @@
+<body>
+<div class="container">
+    <div>
+      <div>
+        <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()" id="con">
+          <h1>Doctor Registration</h1>
+          <div class="form-fields">
+            <div class="form-field">
+              <label for="name">Doctor Name:</label>
+              <input type="text" placeholder="Enter Doctor name" formControlName="name">
+            </div>
+            <div class="form-field">
+              <label for="password">Password:</label>
+              <input type="password" placeholder="Enter the password" formControlName="password">
+            </div>
+            <div class="form-field">
+              <label for="age">Age:</label>
+              <input type="text" placeholder="Enter the age" formControlName="age">
+            </div>
+            <div class="form-field">
+              <label for="contactNo">Contact Number:</label>
+              <input type="number" placeholder="Enter contactNo" formControlName="contactNumber">
+            </div>
+            <div class="form-field">
+              <label for="yearOfExperience">Years Of Experience:</label>
+              <input type="number" placeholder="Enter Years Of Experience" formControlName="yearOfExperience">
+            </div>
+            <div class="form-field">
+              <label for="specialization">Specialization:</label>
+              <input type="string" placeholder="Enter Specialization" formControlName="specialization">
+            </div>
+            <div class="form-field">
+              <label for="shiftTimings">Shift Timings:</label>
+              <input type="text" placeholder="Enter shiftTimings" formControlName="shiftTimings">
+            </div>
+            <div class="form-field">
+              <label for="doctorCode">Doctor Code</label>
+              <input type="text" placeholder="Enter Doctor code " formControlName="doctorCode">
+            </div>
+            <div class="form-actions">
+              <input class="reset" type="update" (click)="update()" value="Update">
+              <input class="submit" type="submit" value="Add">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

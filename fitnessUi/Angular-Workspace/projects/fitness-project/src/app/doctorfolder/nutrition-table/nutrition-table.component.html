@@ -1,0 +1,55 @@
+<div class="container">
+  <form class="form" #frmRegister="ngForm" (submit)="saveNutrition(frmRegister.value)" novalidate>
+    <div class="header">
+      <h2 id="title">Nutrition Table</h2>
+      <button class="back-button" (click)="goBack()"><i class="bi bi-x-circle"></i></button>
+    </div>
+    <div *ngIf="medicalHistory">
+      <h3>Medical History</h3>
+      <div class="table">
+        <div class="table-row header-row">
+          <div class="table-cell">Date Of Assessment</div>
+          <div class="table-cell">Blood Pressure</div>
+          <div class="table-cell">Heart Rate</div>
+        </div>
+        <div class="table-row" *ngFor="let history of medicalHistory">
+          <div class="table-cell">{{ history.dateOfAssessment }}</div>
+          <div class="table-cell">{{ history.bloodPressure }}</div>
+          <div class="table-cell">{{ history.heartRate }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="username">User Name:</label>
+      <input type="text" id="userName" name="username" [(ngModel)]="nutrition.username">
+    </div>
+
+    <div class="form-group">
+      <label for="foodItem">Food Intake:</label>
+      <input type="text" id="foodItem" name="foodItem" [(ngModel)]="nutrition.foodItem" required maxlength="5">
+      <div *ngIf="frmRegister.submitted && frmRegister.controls['foodItem'].invalid" class="error-message">Food Item is required</div>
+    </div>
+
+    <div class="form-group">
+      <label for="caloriesToBeconsumed">Calories Intake:</label>
+      <input type="text" id="caloriesToBeconsumed" name="caloriesToBeconsumed" [(ngModel)]="nutrition.caloriesToBeconsumed" required>
+      <div *ngIf="frmRegister.submitted && frmRegister.controls['caloriesToBeconsumed'].invalid" class="error-message">Calories is required</div>
+    </div>
+
+    <div class="form-group">
+      <label for="proteinToBeconsumed">Protein Intake:</label>
+      <input type="text" id="proteinToBeconsumed" name="proteinToBeconsumed" [(ngModel)]="nutrition.proteinToBeconsumed" required>
+    </div>
+
+    <div class="form-group">
+      <label for="carbohydratesToBeconsumed">Carbohydrates Intake:</label>
+      <input type="text" id="carbohydratesToBeconsumed" name="carbohydratesToBeconsumed" [(ngModel)]="nutrition.carbohydratesToBeconsumed" required>
+    </div>
+    
+    <div class="form-row">
+      <input class="reset" type="reset">
+      <input class="submit" type="submit" value="Set nutrition" routerLink="userfetch">
+    </div>
+  </form>
+</div>

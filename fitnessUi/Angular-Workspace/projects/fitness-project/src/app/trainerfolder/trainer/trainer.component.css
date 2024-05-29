@@ -1,0 +1,96 @@
+.bg-dark{
+    height: 600px;
+    width: 100px;
+     margin-top: 20px ;
+}
+.container-fluid{
+    margin-left: 60px;
+}
+.nav-pills li a span
+{
+  color: #a2a8d3;
+  font-size:21px;
+}
+.nav-pills li a span:hover
+{
+    color: #a2a8d3;
+    font-size:24px;
+    cursor: pointer;
+}
+.nav-item{
+    font-size: 25px; 
+    color:#a2a8d3
+
+}
+#con{
+    width: 160px;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+}
+
+
+ul{
+    list-style: none;
+    color:orange;
+    margin-left: -50px;
+}
+
+.home{
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    font-size: 20px;
+}
+
+.condidates{
+    position: absolute;
+    top: 280px;
+    font-size: 18px;
+}
+
+.feedback{
+    position: absolute;
+    top: 310px;
+}
+.userworkouts{
+    position: absolute;
+    top: 440px;
+    font-size: 18px;
+}
+.attendence{
+    position: absolute;
+    top: 360px;
+    font-size: 18px;
+}
+li{
+    cursor: pointer;
+}
+img{
+    width:80px;
+    height: 80px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    border-radius: 100%;
+  }
+  .horinav{
+    width: 100vw;
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+    list-style: none;
+  }
+
+  .head{
+    position: absolute;
+    color: orange;
+    left: 130px;
+    top: 10px;
+    font-size: 35px;
+    width: 400px;
+  }

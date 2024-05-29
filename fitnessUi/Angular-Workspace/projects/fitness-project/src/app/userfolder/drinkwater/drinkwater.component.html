@@ -1,0 +1,12 @@
+<div class="drink-water-container">
+  <h2>Stay Hydrated</h2>
+  <div>
+    <label for="waterIntake">Glasses of Water Consumed:</label>
+    <input type="number" id="waterIntake" [(ngModel)]="waterIntake" placeholder="Enter glasses of water">
+    <button (click)="logWater()">Log Water</button>
+  </div>
+  <div>
+    <p>Your Daily Goal: {{ dailyGoal }} Glasses</p>
+    <p>Progress: {{ waterIntake }} / {{ dailyGoal }} Glasses</p>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+.bg-dark{
+  height: 650px;
+  width: 150px;
+  margin-top: 20px;
+ 
+}
+
+.nav-pills li a span
+{
+color:orange; 
+font-size:21px;
+margin-left: -20px;
+
+}
+#doctor{
+  text-decoration: none;
+  color:orange; 
+font-size:21px;
+margin-left: 20px;
+
+
+
+
+}
+
+.nav-item{
+  margin-top: 40px;
+  font-size: 25px; 
+  color:orange;
+  margin-left: 0px;
+ 
+}
+
+
+.outlet{
+  height: 100vh;
+  width:81%;
+
+}
+
+img{
+  border-radius: 200px !important;
+  height: 100px;
+  margin-left: 20px;
+}

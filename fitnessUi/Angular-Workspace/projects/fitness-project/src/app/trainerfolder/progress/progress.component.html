@@ -1,0 +1,23 @@
+<div class="container">
+    <div>
+      <div class="form">
+        <h1>Progress</h1>
+        <div class="form-row">
+          <label>Username</label>
+          <input type="text" [(ngModel)]="progress.username" name="name" readonly>
+        </div>
+        <div class="form-row">
+          <label>Date</label>
+          <input type="text" [(ngModel)]="progress.progressDate" name="progressDate">
+        </div>
+        <div class="form-row">
+          <label>Calculated Progress</label>
+          <input type="text" [(ngModel)]="progress.calculateProgress" name="calculateProgress">
+        </div>
+        <div class="form-buttons">
+          <input class="reset" type="reset">
+          <input class="submit" type="submit" value="Submit" routerLink="/trainer/user" (click)="saveProgress()">
+        </div>
+      </div>
+    </div>
+  </div>

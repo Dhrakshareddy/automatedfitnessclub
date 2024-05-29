@@ -1,0 +1,24 @@
+<h2>Medical History</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>dateOfAssessment</th>
+      <th>bloodPressure</th>
+      <th>heartRate</th>
+      <th>allergies</th>
+     
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let medicalHistory of medicalHistory">
+      <td>{{ medicalHistory.dateOfAssessment }}</td>
+      <td>{{ medicalHistory.bloodPressure }}</td>
+      <td>{{medicalHistory.heartRate}}</td>
+      <td>{{ medicalHistory.allergies }}</td>
+     
+     
+    </tr>
+  </tbody>
+</table>

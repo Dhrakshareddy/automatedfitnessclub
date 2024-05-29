@@ -1,0 +1,44 @@
+.workouts {
+  margin-top: 10px;
+  width: 60%;
+  position: absolute;
+  top: 220px;
+  left: 300px;
+}
+
+.workout-header, .workout-row {
+  display: flex;
+}
+
+.workout-cell {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.workout-header {
+  background-color: #f0f0f0;
+}
+
+.workout-header .workout-cell {
+  font-weight: bold;
+}
+
+button {
+  background-color: rgb(94, 94, 208);
+  color: white;
+  border-radius: 10px;
+  margin-left: 10px;
+  top: 200px;
+  left: 500px;
+}
+
+h2 {
+  top: 150px;
+  left: 300px;
+}
+
+input {
+  top: 200px;
+  left: 300px;
+}

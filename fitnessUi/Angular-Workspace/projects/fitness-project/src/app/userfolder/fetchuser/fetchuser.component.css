@@ -1,0 +1,62 @@
+.custom-container {
+  margin-top: 10px;
+  width: 40%;
+  position: absolute;
+  top: 250px;
+  left: 300px;
+}
+
+.user-details {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.detail {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.label {
+  font-weight: bold;
+  width: 100px;
+}
+
+.value {
+  margin-left: 10px;
+}
+
+button {
+  background-color: rgb(94, 94, 208);
+  color: white;
+  border-radius: 10px;
+  margin-left: 10px;
+  position: absolute;
+  top: 200px;
+  left: 500px;
+}
+
+h2 {
+  position: absolute;
+  top: 150px;
+  left: 300px;
+}
+
+input {
+  position: absolute;
+  top: 200px;
+  left: 300px;
+}
+
+.overlay {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  z-index: -1;
+}

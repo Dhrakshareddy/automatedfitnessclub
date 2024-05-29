@@ -1,0 +1,42 @@
+/* .burn-calories-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 150px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  display: block;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  margin-top: 20px;
+} */
+
+
+.test{
+  margin-left: 550px;
+  margin-top: 70px;
+  /* background-color: pink; */
+   height: 100px;
+   width: 100px;
+}

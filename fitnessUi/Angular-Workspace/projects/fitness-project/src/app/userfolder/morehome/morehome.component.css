@@ -1,0 +1,55 @@
+
+button{
+    background-color:rgb(51,63,83);
+    color: orange;
+    border-radius: 5%;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    list-style: none;
+    left: 250px;
+  }
+  .bar li a{
+    color: white;
+    text-decoration: none;
+  }
+ 
+  #b2{
+    position: absolute;
+    
+    top:160px;
+    color: orange;
+  }
+  #b3{
+    position: absolute;
+    
+    top:240px;
+    color: orange;
+    }
+  #b4{
+   position: absolute;
+    
+    top: 320px;
+    color: orange;
+     }
+  #b5{
+  position: absolute;
+ 
+  top: 400px;
+  color: orange;
+   }
+
+ #b6{
+   position: absolute;
+   
+   top: 480px;
+  color: orange;
+   }
+   
+
+
+  h1{
+  font-size: 30px;
+  margin-top: 80px;
+  margin-left: 150px;
+  }

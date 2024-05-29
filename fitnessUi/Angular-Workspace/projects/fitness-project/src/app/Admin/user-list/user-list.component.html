@@ -1,0 +1,40 @@
+<div class="con">
+  <div class="container mt-2">
+    <div class="row p-4 text-end">
+      <div class="d-flex left-align">
+        <h1>User List</h1>
+        <div class="col-md-1">
+          <button class="add" routerLink="add">+</button>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <div class="table-header table-dark">
+          <div class="table-cell">User Name</div>
+          <div class="table-cell">Date of Birth</div>
+          <div class="table-cell">Email</div>
+          <div class="table-cell">Contact Number</div>
+          <div class="table-cell">Fitness Activity</div>
+          <div class="table-cell">Edit</div>
+          <div class="table-cell">Remove</div>
+        </div>
+        <div class="table-body">
+          <!-- Loop through the list of doctors -->
+          <div *ngFor="let user of users" class="table-row">
+            <div class="table-cell">{{ user.name}}</div>
+            <div class="table-cell">{{ user.dateOfBirth | date }}</div>
+            <div class="table-cell">{{ user.email}}</div>
+            <div class="table-cell">{{ user.contactNumber }}</div>
+            <div class="table-cell">{{ user.fitnessActivity }}</div>
+            <div class="table-cell">
+             <div class="edit" routerLink="edit/{{ user.userId }}"><i class="fas fa-edit"></i></div>
+            </div>
+            <div class="table-cell">
+              <!-- Delete button -->
+              <div class="delete" *ngIf="user.userId" (click)="deleteUser(user.userId)"><i class="fa-solid fa-trash"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

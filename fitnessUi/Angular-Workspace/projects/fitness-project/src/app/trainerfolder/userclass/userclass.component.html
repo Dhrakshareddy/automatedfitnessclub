@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>List of Trainees</h1>
+  <div class="trainee-list">
+    <!-- Column headings -->
+    <div class="trainee-header">
+      <div class="header-item">User Name</div>
+      <div class="header-item">Email</div>
+      <div class="header-item">Contact</div>
+      <div class="header-item">Actions</div>
+   </div>
+    
+    <!-- Trainee items -->
+    <div class="trainee-item" *ngFor="let user of users">
+      <div class="item-info">{{ user.name }}</div>
+      <div class="item-info">{{ user.email }}</div>
+      <div class="item-info">{{ user.contactNumber }}</div>
+      <div class="item-actions">
+        <button class="action-button" (click)="goToClasses(user.name)">Classes</button>
+        <button class="action-button" (click)="goToAttendance(user.name)">Attendance</button>
+      </div>
+    </div>
+  </div>
+</div>
